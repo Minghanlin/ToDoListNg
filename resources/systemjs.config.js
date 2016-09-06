@@ -9,7 +9,8 @@
 
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
-    'rxjs': { defaultExtension: 'js' }
+    'rxjs': { defaultExtension: 'js' },
+    'components': { defaultExtension: 'js' }
   };
 
   var packageNames = [

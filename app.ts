@@ -1,5 +1,3 @@
-
-
 import {
   Component,
   EventEmitter
@@ -8,48 +6,26 @@ import {
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
-// import { FormComponent } from "./components/form.component";
+import { PlannerComponent } from "./components/planner.component";
+import { TaskComponent, Task } from "./components/task/task.component";
+
 
 
 @Component({
   selector: 'my-app',
-  // declarations: [FormComponent],
+  // directives: [PlannerComponent, TaskComponent, Task],
   template: `
-<div class="jumbotron">
-  <div class="container">
-    <h1>To Do List</h1>
-    <p>Do do do do do</p>
-          <form class="ui large form segment">
-          <h3 class="ui header">Add Task</h3>
-
-          <div class="field">
-         <label for="name">Name: </label>
-          <input name="name" #newname>
-          </div>
-           <div class="field">
-           <label for="status">Status:</label>
-          <input name="status" #newstatus>
-          </div>
-
-         <button (click)="addTask(newname, newstatus)"
-              class="ui positive right floated button">
-        Submit task
-         </button>
-        </form>
-    <div class="clear"></div>
-        <div class="col-sm-6" id="todo"></div>
-        <div class="col-sm-6" id="notdone"></div>
-</div>
-</div>
+    <planner></planner>
   `
 })
-class InventoryApp { }
+class AppComponent { }
 
 @NgModule({
-  declarations: [InventoryApp],
+  // declarations: [AppComponent, PlannerComponent, TaskComponent],
+  declarations: [AppComponent, PlannerComponent, TaskComponent],
   imports: [ BrowserModule ],
-  bootstrap: [ InventoryApp ]
+  bootstrap: [ AppComponent ]
 })
-class InventoryAppModule {}
+class AppComponentModule {}
 
-platformBrowserDynamic().bootstrapModule(InventoryAppModule);
+platformBrowserDynamic().bootstrapModule(AppComponentModule);

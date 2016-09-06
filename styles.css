@@ -1,11 +1,10 @@
-.navbar {
+/*.navbar {
   margin-bottom: 0;
 }
 
 .bordered {
 border: 1px dashed black;
-background-color: #eee;
-}
+}*/
 
 
 
@@ -21,10 +20,19 @@ background-color: #eee;
 
  #todo {
    background-color: lightseagreen;
-   min-height: 395px;
+   min-height: 675px;
+   
  }
 
- #notdone {
+ #done {
    background-color: lightpink;
-   min-height: 395px;
+   min-height: 675px;
  }
+
+ .panel {
+   background: none;
+ }
+
+#taskdifficulty {
+  font-family: initial;
+  }
