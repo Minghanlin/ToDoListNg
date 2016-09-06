@@ -30,9 +30,10 @@ export class Task {
     <div class="panel panel-default">
       <div> <span id="taskname"> {{ task.name }} </span>
      <span id="taskdifficulty"> {{ task.difficulty }} </span> 
-              <button type="button" (click)="taskDone()">
+             <div id="donebutton" *ngIf="task.status === false"> <button type="button" (click)="taskDone()">
               Done
             </button>
+            </div>
               <button type="button" (click)="taskDeleted()">
               Delete
             </button>

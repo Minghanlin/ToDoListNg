@@ -13,17 +13,17 @@ import { TaskComponent, Task } from './task/task.component';
                   <h3 class="ui header">Report Mission</h3>
 
                   <div class="field">
-                  <label for="name">Missions:</label>
+                  <label for="name">Mission:</label>
                   <input placeholder="Enter Mission" #newname>
                   </div>
                   <div class="field">
                   <label for="difficulty">Difficulty:</label>
                   
                <select name="Difficulty" #newdifficulty>
-                <option value="easy">Easy Peasy</option>
-                <option value="moderate">Normal</option>
-                <option value="difficult">Difficult</option>
-                <option value="difficult">Impossible</option>
+                <option value="Easy Peasy">Easy Peasy</option>
+                <option value="Moderate">Normal</option>
+                <option value="Difficult">Difficult</option>
+                <option value="Impossible">Impossible</option>
                </select>
                 
                   </div>
@@ -56,7 +56,7 @@ constructor() {
   this.tasks = [
     new Task("Cook an antelope", "Easy Peasy", false),
     new Task("Learn coding from Gerald", "Moderate", false),
-    new Task("Ground coffee beans", "Diffiult", false),
+    new Task("Ground coffee beans", "Difficult", false),
     new Task("Eat a rainbow", "Easy Peasy", false),
     new Task("Pet an elephant", "Difficult", false),
     new Task("Wave at a panda", "Moderate", false),

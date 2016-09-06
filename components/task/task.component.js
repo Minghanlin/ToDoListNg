@@ -50,7 +50,7 @@ System.register(['@angular/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'mh-task',
                         inputs: ['task'],
-                        template: "\n    <div class=\"panel panel-default\">\n      <div> <span id=\"taskname\"> {{ task.name }} </span>\n     <span id=\"taskdifficulty\"> {{ task.difficulty }} </span> \n              <button type=\"button\" (click)=\"taskDone()\">\n              Done\n            </button>\n              <button type=\"button\" (click)=\"taskDeleted()\">\n              Delete\n            </button>\n\n    </div>\n    </div>\n "
+                        template: "\n    <div class=\"panel panel-default\">\n      <div> <span id=\"taskname\"> {{ task.name }} </span>\n     <span id=\"taskdifficulty\"> {{ task.difficulty }} </span> \n             <div id=\"donebutton\" *ngIf=\"task.status === false\"> <button type=\"button\" (click)=\"taskDone()\">\n              Done\n            </button>\n            </div>\n              <button type=\"button\" (click)=\"taskDeleted()\">\n              Delete\n            </button>\n\n    </div>\n    </div>\n "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], TaskComponent);
