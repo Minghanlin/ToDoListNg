@@ -30,12 +30,12 @@ export class Task {
     <div class="panel panel-default">
       <div> <span id="taskname"> {{ task.name }} </span>
      <span id="taskdifficulty"> {{ task.difficulty }} </span> 
-              <a href (click)="taskDone()">
-              Task Done
-            </a>
-              <a href (click)="taskDeleted()">
+              <button type="button" (click)="taskDone()">
+              Done
+            </button>
+              <button type="button" (click)="taskDeleted()">
               Delete
-            </a>
+            </button>
 
     </div>
     </div>

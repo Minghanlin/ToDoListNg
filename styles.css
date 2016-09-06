@@ -36,3 +36,13 @@ border: 1px dashed black;
 #taskdifficulty {
   font-family: initial;
   }
+
+  label, select {
+    display: inline-block !important;
+  }
+  select {
+    width: 190px;
+  }
+  option {
+    font-size: 45px;
+  }

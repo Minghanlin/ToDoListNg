@@ -18,7 +18,14 @@ import { TaskComponent, Task } from './task/task.component';
                   </div>
                   <div class="field">
                   <label for="difficulty">Difficulty:</label>
-                  <input placeholder="Difficulty" #newdifficulty>
+                  
+               <select name="Difficulty" #newdifficulty>
+                <option value="easy">Easy Peasy</option>
+                <option value="moderate">Normal</option>
+                <option value="difficult">Difficult</option>
+                <option value="difficult">Impossible</option>
+               </select>
+                
                   </div>
 
                 <button type="button" (click)="addTask(newname, newdifficulty)"
@@ -47,13 +54,13 @@ tasks: Task[];
 
 constructor() {
   this.tasks = [
-    new Task("Cook an antelope", "Easy", false),
-    new Task("Learn coding from Gerald", "Peasy", false),
-    new Task("Ground coffee beans", "Tiring", false),
-    new Task("Eat a rainbow", "Impossible", false),
-    new Task("Pet an elephant", "Easy", false),
+    new Task("Cook an antelope", "Easy Peasy", false),
+    new Task("Learn coding from Gerald", "Moderate", false),
+    new Task("Ground coffee beans", "Diffiult", false),
+    new Task("Eat a rainbow", "Easy Peasy", false),
+    new Task("Pet an elephant", "Difficult", false),
     new Task("Wave at a panda", "Moderate", false),
-    new Task("Slurp a slurpee", "Boring", false)
+    new Task("Slurp a slurpee", "Impossible", false)
   ];
 }
   addTask(name: HTMLInputElement, difficulty: HTMLInputElement): void {
